@@ -192,6 +192,7 @@ mappings_dict = {
             "Account Not Found - No Patient Found":"Exception",
             "Review Required by Northwell - Pending Representative Review":"Exception",
             "Unspecified Technical Failure - ":"Exception",
+            "Review Required by Northwell - Excessive Edit Descriptions":"Exception",
         },
         "scenario_crosswalk": {
             "New/Unexpected Screen Element - Edit Selector Header Screen":"Unable to detect the Edit Selector Header screen",
@@ -223,6 +224,7 @@ mappings_dict = {
             "Account Not Found - No Patient Found":"No search results for patient; Likely worked by another user",
             "Review Required by Northwell - Pending Representative Review":"Business rules applied to pend txn for further review",
             "Unspecified Technical Failure - ":"Unspecified Technical Error",
+            "Review Required by Northwell - Excessive Edit Descriptions":"Excessive Edits requires additional review",
         },
         "column_crosswalk": {
             "PTFULLNAME": "Patient Name",
@@ -280,7 +282,8 @@ mappings_dict = {
             "Validation Error - Encounter Number":"Exception",
             "Account Not Found - No Patient Found":"Exception",
             "Unspecified Technical Failure - ":"Exception",
-            "Review Required by Northwell - PRR – DX Pointers": "Exception",
+            "Review Required by Northwell - PRR - DX Pointers": "Exception",
+            "Review Required by Northwell - PRR - Procedure Code":"Exception",
         },
         "scenario_crosswalk": {
             "Specified Process Failure - Email Not Sent to Provider":"Technical Error prevented email from being sent",
@@ -303,7 +306,8 @@ mappings_dict = {
             "Validation Error - Encounter Number":"Unable to validate encounter number",
             "Account Not Found - No Patient Found":"No search results for patient; Likely worked by another user",
             "Unspecified Technical Failure - ":"Unspecified Technical Error",
-            "Review Required by Northwell - PRR – DX Pointers": "Unable to update DX Pointers. Additional review required",
+            "Review Required by Northwell - PRR - DX Pointers": "Unable to update DX Pointers. Additional review required",
+            "Review Required by Northwell - PRR - Procedure Code":"Unable to update DX Pointers. Additional review required",
         },
         "column_crosswalk": {
             "PTFULLNAME": "Patient Name",
@@ -741,6 +745,8 @@ System.IndexOutOfRangeException: Index was outside the bounds of the array.
             "Ecare-Benifit Request Submited - Medicare Comment Extracted  Sucessfully":"Success",
             "BOT encountered unexpected screen elements or new screen and could not navigate - Unhandled exception":"Exception",
             " - ":"Exception",
+            " - Coverage Tab is Empty":"Exception",
+            " - Eligibility Date Not Present":"Exception",
 
         },
         "scenario_crosswalk": {
@@ -765,6 +771,8 @@ System.IndexOutOfRangeException: Index was outside the bounds of the array.
             "Ecare-Benifit Request Submited - Medicare Comment Extracted  Sucessfully":"End-to-end Success",
             "BOT encountered unexpected screen elements or new screen and could not navigate - Unhandled exception":"Unspecified New Screen Element",
             " - ":"Manually Excluded Volume",
+            " - Coverage Tab is Empty":"Manually Excluded Volume",
+            " - Eligibility Date Not Present":"Manually Excluded Volume",
 
         },
         "column_crosswalk": {
@@ -990,7 +998,7 @@ System.IndexOutOfRangeException: Index was outside the bounds of the array.
             "RetrievalDescription": "Retrieval Description",
             "Reason": "Reason",
         },
-        "carbon_copy": 'avais@northwell.edu; aharrison7@northwell.edu; bcerami@northwell.edu; CSchumacher1@northwell.edu; SFerebee@northwell.edu; ssirico@northwell.edu; cchandler1@northwell.edu; eromero12@northwell.edu',
+        "carbon_copy": 'avais@northwell.edu; bcerami@northwell.edu; CSchumacher1@northwell.edu; ssirico@northwell.edu; eromero12@northwell.edu; ccruz2@northwell.edu; SMolina2@northwell.edu; Ccardinali@northwell.edu',
         "name_format": "{file_path}/{year_str}/{year_str}{month_str}{day_str}_PAANS_BADDEBT_IB_BOT_OUTBOUND.xlsx",
         "drop_columns": [
             'Retrieval Status', 
