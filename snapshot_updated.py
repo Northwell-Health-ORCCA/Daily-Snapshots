@@ -117,18 +117,18 @@ class MainSpreadsheet(DateFunctions):
 
 
 class Snapshot(MainSpreadsheet):
-    def __init__(self, use_case, main_df, file_date) -> None:
+    def __init__(self, use_case, main_df, file_date, mappings_dict) -> None:
         super().__init__()
         self.use_case = use_case
-        self.file_path = mappings.mappings_dict[f"{self.use_case}"]["file_path"]
-        self.status_crosswalk = mappings.mappings_dict[f"{self.use_case}"]["status_crosswalk"]
-        self.scenario_crosswalk = mappings.mappings_dict[f"{self.use_case}"]["scenario_crosswalk"]
-        self.columns = mappings.mappings_dict[f"{self.use_case}"]["columns"]
-        self.columns_crosswalk = mappings.mappings_dict[f"{self.use_case}"]["column_crosswalk"]
-        self.cc_emails = mappings.mappings_dict[f"{self.use_case}"]["carbon_copy"]
-        self.name_format_str = mappings.mappings_dict[f"{self.use_case}"]["name_format"]
-        self.drop_columns = mappings.mappings_dict[f"{self.use_case}"]["drop_columns"]
-        self.botname = mappings.mappings_dict[f"{self.use_case}"]["BotName"]
+        self.file_path = mappings_dict[f"{self.use_case}"]["file_path"]
+        self.status_crosswalk = mappings_dict[f"{self.use_case}"]["status_crosswalk"]
+        self.scenario_crosswalk = mappings_dict[f"{self.use_case}"]["scenario_crosswalk"]
+        self.columns = mappings_dict[f"{self.use_case}"]["columns"]
+        self.columns_crosswalk = mappings_dict[f"{self.use_case}"]["column_crosswalk"]
+        self.cc_emails = mappings_dict[f"{self.use_case}"]["carbon_copy"]
+        self.name_format_str = mappings_dict[f"{self.use_case}"]["name_format"]
+        self.drop_columns = mappings_dict[f"{self.use_case}"]["drop_columns"]
+        self.botname = mappings_dict[f"{self.use_case}"]["BotName"]
         self.main_df = main_df
         self.file_date = file_date   
     
@@ -243,5 +243,5 @@ class Snapshot(MainSpreadsheet):
         self.mail.Subject = f'{self.use_case} Daily Snapshot - {self.file_date_str_slash}'
         self.mail.HTMLBody = self.email_body
         self.mail.To = 'denglish2@northwell.edu'
-        self.mail.CC = self.cc_emails
+        # self.mail.CC = self.cc_emails
         self.mail.Send()
