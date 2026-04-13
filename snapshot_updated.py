@@ -243,5 +243,5 @@ class Snapshot(MainSpreadsheet):
         self.mail.Subject = f'{self.use_case} Daily Snapshot - {self.file_date_str_slash}'
         self.mail.HTMLBody = self.email_body
         self.mail.To = 'denglish2@northwell.edu'
-        # self.mail.CC = self.cc_emails
+        self.mail.CC = self.cc_emails
         self.mail.Send()
