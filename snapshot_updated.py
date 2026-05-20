@@ -141,7 +141,7 @@ class Snapshot(MainSpreadsheet):
         self.export_to_excel()
         self.use_case_df = pd.DataFrame(self.use_case_df, columns=self.columns)
         self.use_case_df.rename(columns=self.columns_crosswalk, inplace=True)
-        self.use_case_df['RD + Reason'] = self.use_case_df['Retrieval Description']+ " - " + self.use_case_df['Reason']
+        self.use_case_df['RD + Reason'] = self.use_case_df['Retrieval Description'].astype(str) + " - " + self.use_case_df['Reason'].astype(str)
 
     # get the date for the NCOA use case
     def get_ncoa_date(self):
