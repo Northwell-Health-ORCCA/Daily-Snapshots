@@ -1,6 +1,6 @@
-beautifulsoup4==4.11.2
-loguru==0.7.2
-matplotlib==3.7.1
-numpy==1.24.2
-pandas==1.5.3
-pywin32==305
+beautifulsoup4
+loguru
+matplotlib
+numpy
+pandas
+pywin32
